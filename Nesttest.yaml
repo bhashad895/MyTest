@@ -3,14 +3,9 @@ pr: none
 
 resources:
   repositories:
-  - repository: iia-cicd-repo
-    type: githubenterprise
-    endpoint: mygithub_service_connection
-    name: gsk-tech/iia-cicd
-    ref: refs/tags/v6.1.0
+  - repository: testrepo
+    type: gitHub
+    endpoint: MyTest
+    name: bhashad895/MyTest
+   
 
-extends:
-  template: /gdi/newco/pipelines/gdi-build-pipeline-core.yml@iia-cicd-repo
-  parameters:
-      buildType: 'CI'  
-      agentPool: 'gdi-agents-pool-azvm-dev'
